@@ -49,10 +49,15 @@ def generate_audiogram(audio, sr, title="Audiogram Visualization", max_points=50
 
 # Convert uploaded file to WAV if needed
 def convert_to_wav(uploaded_file):
+ # space
     audio = AudioSegment.from_file(uploaded_file)  # Auto-detect format
+#space
     wav_io = io.BytesIO()
+#space
     audio.export(wav_io, format="wav")  # Convert to WAV
+#space
     wav_io.seek(0)
+#space
     return wav_io
 
 # Streamlit UI
